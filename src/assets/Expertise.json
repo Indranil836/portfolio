@@ -1,0 +1,34 @@
+{
+  "techCategories": [
+    {
+      "name": "Frontend",
+      "icon": "bi bi-palette",
+      "items": ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Material UI", "Redux", "Vue.js", "Angular"]
+    },
+    {
+      "name": "Backend",
+      "icon": "bi bi-gear",
+      "items": ["Node.js", "Express", "Python", "Django", "Flask", "Ruby on Rails", "Java", "Spring Boot", "PHP", "Laravel"]
+    },
+    {
+      "name": "Database",
+      "icon": "bi bi-database",
+      "items": ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Redis", "GraphQL", "Prisma"]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "icon": "bi bi-cloudy-fill",
+      "items": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Jenkins", "GitHub Actions"]
+    },
+    {
+      "name": "AI/ML",
+      "icon": "bi bi-anthropic",
+      "items": ["Python", "TensorFlow", "PyTorch", "OpenAI", "Pandas", "NumPy", "Scikit-learn"]
+    },
+    {
+      "name": "Testing",
+      "icon": "bi bi-bag-check-fill",
+      "items": ["Jest", "Cypress", "Selenium", "Mocha", "Chai"]
+    }
+  ]
+}

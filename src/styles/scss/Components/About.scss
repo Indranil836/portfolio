@@ -1,0 +1,56 @@
+@use '../importer';
+@use '../variables/var' as *;
+
+.about_section {
+    background: linear-gradient(90deg,rgba(29, 44, 80, 1) 0%, rgba(217, 195, 30, 1) 0%, rgba(92, 10, 29, 1) 0%, rgba(90, 56, 155, 1) 56%, rgba(16, 40, 89, 1) 100%, rgba(0, 89, 255, 1) 100%, rgba(231, 0, 247, 1) 100%, rgba(48, 22, 69, 1) 100%, rgba(18, 26, 40, 1) 100%, rgba(18, 26, 40, 1) 100%, rgba(18, 26, 40, 1) 100%, rgba(18, 4, 4, 1) 100%);
+    color: $gray-shade-10;
+    padding: 40px 0;
+    .education {
+        .card {
+            background: $light-blue;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: $white;
+            margin-bottom: 20px;
+            .card-header {
+            background: $light-blue;
+                color: $white;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                i {
+                    margin-right: 10px;
+                }
+            }
+            &:hover {
+                background: #243763;
+                .card-header {
+                    background: #243763;
+                }
+            }
+        }
+    }
+    .career_highlight {
+         background: #243763;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: $white;
+            margin-bottom: 20px;
+            .card-header {
+            background: #243763;
+                color: $white;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                i {
+                    margin-right: 10px;
+                }
+            }
+            &:hover {
+                background: $light-blue;
+                .card-header {
+                    background: $light-blue;
+                }
+            }
+    }
+} 

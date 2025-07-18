@@ -1,0 +1,118 @@
+@use '../importer';
+@use '../variables/var' as *;
+
+.contact_section {
+    background: $blue-02;
+    color: $gray-01;
+    .contact_me_form {
+        background: $blue-03;
+        border-radius: 5%;
+        padding: 40px;
+        width: 100%;
+        width: '100%';
+        max-width: 700px; 
+        input, select, textarea {
+            background: $blue-02;
+            color: $gray-14;
+            border: 1px solid $blue-01;
+            border-radius: 5px;
+            :focus {
+                border-color: $blue-01;
+                box-shadow: 0 0 5px $blue-01;
+            }
+            // White placeholder text
+                &::placeholder {
+                color: white;
+                opacity: 0.8;
+                }
+                
+                // Focus state
+                &:focus {
+                border-color: $blue-01;
+                box-shadow: 0 0 5px $blue-01;
+                
+                // Placeholder disappears on focus (optional)
+                &::placeholder {
+                    opacity: 0.5;
+                }
+                }
+
+        }
+    }
+
+    // Custom radio buttons with icons
+.inquiry-type-selector {
+  .form-check {
+    padding-left: 0;
+    margin-bottom: 1rem;
+    
+    // Hide default radio input
+    .form-check-input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    // Custom radio label container
+    .form-check-label {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border: 2px solid $blue-02;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: $blue-02;
+      
+      // Icon styling
+      .inquiry-icon {
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+        color: #e9ecef;
+        transition: all 0.3s ease;
+      }
+      
+      // Text styling
+      .inquiry-text {
+        font-weight: 500;
+        color: #e9ecef;
+      }
+    }
+    
+    // Hover state
+    &:hover .form-check-label {
+      border-color: #adb5bd;
+      background-color: #e9ecef;
+      
+      .inquiry-icon, .inquiry-text {
+        color: #495057;
+      }
+    }
+    
+    // Checked state
+    .form-check-input:checked + .form-check-label {
+      border-color: #0d6efd;
+      background-color: #e7f1ff;
+      
+      .inquiry-icon {
+        color: #0d6efd;
+      }
+      
+      .inquiry-text {
+        color: #0a58ca;
+      }
+    }
+    
+    // Focus state
+    .form-check-input:focus + .form-check-label {
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+  }
+}
+}
+
+#consent-checkbox:checked {
+    border-color: #0d6efd;
+    background-color: #0d6efd;
+}

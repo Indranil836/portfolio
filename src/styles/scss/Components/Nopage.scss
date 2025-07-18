@@ -1,0 +1,17 @@
+@use '../importer';
+@use '../variables/var' as *;
+
+.no-page {
+  background: radial-gradient(circle,rgba(29, 44, 80, 1) 0%, rgba(18, 26, 40, 1) 100%, rgba(18, 26, 40, 1) 100%, rgba(18, 26, 40, 1) 100%, rgba(83, 87, 92, 1) 100%, rgba(18, 26, 40, 1) 23%, rgba(128, 128, 128, 1) 76%, rgba(18, 26, 40, 1) 50%);
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  align-items: center;
+
+  h4 {
+    color: white;
+    font-size: 2rem;
+  }
+}

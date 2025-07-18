@@ -1,0 +1,203 @@
+@use '../importer';
+@use '../variables/var' as *;
+
+.featured_blog {
+    background-color: $dark-blue;
+    color: $gray-01;
+    padding: 2rem 0;
+
+    .blog-card {
+        background-color: $blue-01;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background-color: $focus-color;
+            color: white;
+            font-weight: bold;
+            padding: 1rem;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-body {
+            padding: 1rem;
+
+            h5 {
+                margin-bottom: 1rem;
+                font-size: 1.25rem;
+                color: $gray-01;
+            }
+
+            p {
+                color: $gray-14;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .search-container {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+
+        .form-control {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: 1px solid $gray-14;
+
+            &:focus {
+                border-color: $focus-color;
+                box-shadow: 0 0 0 0.2rem rgba($focus-color, 0.25);
+            }
+        }
+    }
+}
+
+.featured_blog {
+  padding: 4rem 0;
+
+  
+  .subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+  }
+  
+  .featured-card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 1.5rem;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .articles-scroll-container {
+    height: 100%;
+    max-height: 900px;
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #adb5bd #f1f1f1;
+    
+    /* Custom scrollbar for WebKit browsers */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #adb5bd;
+      border-radius: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+      background: #6c757d;
+    }
+    
+    .article-card {
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      padding: 1.25rem;
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+  .badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+  }
+  
+  .btn-outline-primary {
+    border-width: 2px;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+  }
+  
+  .btn-link {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 0;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .view-all-btn {
+    border-width: 2px #f8f9fa;
+    font-weight: 500;
+    min-width: 200px;
+    background-color: $blue-01;
+    color: #f8f9fa;
+    
+    &:hover {
+      background-color: #4a6baf;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 992px) {
+  .featured_blog {
+    .articles-scroll-container {
+      max-height: none;
+      overflow-y: visible;
+      padding-right: 0;
+    }
+  }
+}
+
+        .articles-scroll-container {
+    /* Existing styles... */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #4a6baf #e0e5f0; /* For Firefox - thumb and track color */
+
+    /* WebKit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #e0e5f0; /* Light blue-gray track */
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #4a6baf; /* Dark blue thumb */
+        border-radius: 10px;
+        border: 2px solid #e0e5f0; /* Matches track color */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #3a5690; /* Darker blue on hover */
+    }
+    }
+  }
