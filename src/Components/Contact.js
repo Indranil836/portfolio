@@ -25,27 +25,36 @@ export default function Contact() {
       const formData = new FormData(e.target);
       const formValues = Object.fromEntries(formData.entries());
       
+      const submittedAt = new Date().toLocaleString('en-US', {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      });
+
       const submissionData = {
-        name: formValues.formFullName,
-        company: formValues.formCompany,
-        subject: formValues.formSubject,
-        email: formValues.formEmail,
-        message: formValues.formMessage,
-        inquiryType: inquiryType,
-        consent: formValues.consentCheckbox === 'on',
+        subject: `[Portfolio Inquiry] ${formValues.formSubject || 'New Contact Submission'} from ${formValues.formFullName}`,
+        from_name: formValues.formFullName,
+        replyto: formValues.formEmail,
+        "Site Name": "Indranil Roy Portfolio (indranil836.github.io/portfolio)",
+        "Submitted At": submittedAt,
+        "Full Name": formValues.formFullName,
+        "Company": formValues.formCompany || 'N/A',
+        "Email Address": formValues.formEmail,
+        "Subject": formValues.formSubject,
+        "Inquiry Type": inquiryType || 'General',
+        "Message": formValues.formMessage,
         ...(showProjectFields && {
-          budget: formValues.formProjectBudget,
-          technologies: formValues.formProjectTech,
-          timeline: formValues.formTimeline,
+          "Project Budget": formValues.formProjectBudget || 'N/A',
+          "Technologies Involved": formValues.formProjectTech || 'N/A',
+          "Estimated Timeline": formValues.formTimeline || 'N/A',
         }),
         ...(showSpeakingFields && {
-          eventName: formValues.formEventName,
-          eventDate: formValues.formEventDate,
-          topic: formValues.formSpeakingTopic
+          "Event Name": formValues.formEventName || 'N/A',
+          "Event Date": formValues.formEventDate || 'N/A',
+          "Speaking Topic": formValues.formSpeakingTopic || 'N/A'
         }),
         ...(showMentoringFields && {
-          mentoringArea: formValues.formMentoringArea,
-          experienceLevel: formValues.formExperienceLevel
+          "Mentoring Area": formValues.formMentoringArea || 'N/A',
+          "Experience Level": formValues.formExperienceLevel || 'N/A'
         })
       };
 
