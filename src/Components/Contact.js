@@ -51,15 +51,21 @@ export default function Contact() {
 
       console.log('Submitting:', submissionData);
 
-      // Remove the nested handleSubmit and make the request directly
-      const response = await axios.post('http://localhost:9013/contact', submissionData);
-      console.log('Success:', response.data);
-      
-      setSubmitStatus({
-        success: true,
-        message: 'Message sent successfully! I\'ll get back to you soon.'
+      // Submit to Web3Forms API using environment variable
+      const response = await axios.post('https://api.web3forms.com/submit', {
+        access_key: process.env.REACT_APP_WEB3FORMS_ACCESS_KEY,
+        ...submissionData
       });
-      e.target.reset();
+      
+      if (response.data.success) {
+        setSubmitStatus({
+          success: true,
+          message: 'Message sent successfully! I\'ll get back to you soon.'
+        });
+        e.target.reset();
+      } else {
+        throw new Error(response.data.message || 'Submission failed');
+      }
 
     } catch (error) {
       console.error('Error:', error);
