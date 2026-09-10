@@ -32,10 +32,10 @@ function Header() {
         <NavbarCollapse id="basic-navbar-nav">
           <Nav className="ms-auto header_links">
             <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>Home</Nav.Link>
-            <a className="nav-link" href='/#expertise' onClick={() => setExpanded(false)}>Portfolio</a>
-            <a className="nav-link" href='/#about' onClick={() => setExpanded(false)}>About Me</a>
-            <a className="nav-link" href='/#blog' onClick={() => setExpanded(false)}>Blog</a>
-            <a className="nav-link" href='/#contact' onClick={() => setExpanded(false)}>Contact</a>
+            <a className="nav-link" href='#expertise' onClick={() => setExpanded(false)}>Portfolio</a>
+            <a className="nav-link" href='#about' onClick={() => setExpanded(false)}>About Me</a>
+            <a className="nav-link" href='#blog' onClick={() => setExpanded(false)}>Blog</a>
+            <a className="nav-link" href='#contact' onClick={() => setExpanded(false)}>Contact</a>
           </Nav>
         </NavbarCollapse>
       </Container>
