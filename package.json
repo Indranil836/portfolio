@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://indranil836.github.io",
+  "homepage": "https://indranil836.github.io/portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@testing-library/dom": "^10.4.0",
