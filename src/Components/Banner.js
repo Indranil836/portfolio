@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
-import Profile from '../assets/profile.jpg';
+import Profile from '../assets/profile.jpeg';
 import '../styles/css/Components/Banner.min.css';
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // Import the slim package
@@ -56,13 +56,13 @@ export default function Banner() {
             },
             particles: {
               color: {
-                value: "#ffffff",
+                value: ["#38bdf8", "#818cf8", "#c084fc"],
               },
               links: {
-                color: "#ffffff",
-                distance: 150,
+                color: "#818cf8",
+                distance: 140,
                 enable: true,
-                opacity: 0.5,
+                opacity: 0.25,
                 width: 1,
               },
               move: {
@@ -71,30 +71,24 @@ export default function Banner() {
                 outModes: {
                   default: "bounce",
                 },
-                random: false,
-                speed: 2,
+                random: true,
+                speed: 1.5,
                 straight: false,
               },
               number: {
                 density: {
                   enable: true,
                 },
-                value: 80,
+                value: 65,
               },
               opacity: {
-                value: 0.5,
+                value: { min: 0.2, max: 0.45 },
               },
               shape: {
-                type: "triangle",
-                options: {
-                  triangle: {
-                    fill: true,
-                    close: true
-                  }
-                }
+                type: "circle",
               },
               size: {
-                value: { min: 1, max: 5 },
+                value: { min: 1, max: 3.5 },
               },
             },
             detectRetina: true,
@@ -108,17 +102,17 @@ export default function Banner() {
               </div>
             </Row>
             <Row>
-              <h1 className="gradient-text">Hi, I'm Indranil Roy</h1>
-              <h2>Backend Developer at Innoraft | Full-Stack Software Engineer | Technology Leader</h2>
+              <h1 className="gradient-text">Hi, I'm Indranil</h1>
+              <h2>Full-Stack Developer | Drupal Specialist | Cloud & AI Enthusiast</h2>
               <p>
-                With over 3 years of experience in full-stack software engineering, I specialize in designing and delivering exceptional solutions that prioritize quality, maintainability, and scalability. Currently a part of the Ads Central UX team at Google in Bengaluru, I am passionate about creating transformative user experiences and driving innovation in every project I undertake.
+                I build scalable, high-performance web applications, combining a deep passion for backend engineering, cloud architecture, and modern system design with a commitment to client success. Over the past four years, I have specialized in bridging the gap between complex technical requirements and intuitive, business-driven solutions.
               </p>
               <div className='banner_btn'>
                 <Button variant="primary" size="lg" className="gradient-btn-primary" href="#expertise">
                   View My Work
                 </Button>
                 <Button variant="secondary" size="lg" className="gradient-btn-secondary" href="#contact">
-                  Contact Me
+                  Get in Touch
                 </Button>
               </div>
             </Row>

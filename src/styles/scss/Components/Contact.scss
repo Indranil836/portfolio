@@ -2,117 +2,180 @@
 @use '../variables/var' as *;
 
 .contact_section {
-    background: $blue-02;
-    color: $gray-01;
-    .contact_me_form {
-        background: $blue-03;
-        border-radius: 5%;
-        padding: 40px;
-        width: 100%;
-        width: '100%';
-        max-width: 700px; 
-        input, select, textarea {
-            background: $blue-02;
-            color: $gray-14;
-            border: 1px solid $blue-01;
-            border-radius: 5px;
-            :focus {
-                border-color: $blue-01;
-                box-shadow: 0 0 5px $blue-01;
-            }
-            // White placeholder text
-                &::placeholder {
-                color: white;
-                opacity: 0.8;
-                }
-                
-                // Focus state
-                &:focus {
-                border-color: $blue-01;
-                box-shadow: 0 0 5px $blue-01;
-                
-                // Placeholder disappears on focus (optional)
-                &::placeholder {
-                    opacity: 0.5;
-                }
-                }
+  background: transparent;
+  color: #f3f4f6;
+  padding: 5rem 0;
 
-        }
+  h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  p {
+    color: #94a3b8;
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .contact_me_form {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 750px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      border-color: rgba(99, 102, 241, 0.35);
+      box-shadow: 0 25px 60px rgba(99, 102, 241, 0.2);
     }
 
-    // Custom radio buttons with icons
-.inquiry-type-selector {
-  .form-check {
-    padding-left: 0;
-    margin-bottom: 1rem;
-    
-    // Hide default radio input
-    .form-check-input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
+    h5 {
+      color: #f8fafc;
+      font-weight: 600;
+      font-size: 1.1rem;
     }
-    
-    // Custom radio label container
-    .form-check-label {
-      display: flex;
-      align-items: center;
-      padding: 0.75rem 1rem;
-      border: 2px solid $blue-02;
-      border-radius: 0.5rem;
-      cursor: pointer;
+
+    /* Glass Input Styling */
+    input.form-control,
+    select.form-select,
+    textarea.form-control {
+      background: rgba(15, 23, 42, 0.6) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      border-radius: 12px !important;
+      padding: 0.8rem 1.2rem;
+      font-size: 0.98rem;
       transition: all 0.3s ease;
-      background: $blue-02;
-      
-      // Icon styling
-      .inquiry-icon {
-        font-size: 1.5rem;
-        margin-right: 0.75rem;
-        color: #e9ecef;
-        transition: all 0.3s ease;
+
+      &::placeholder {
+        color: #64748b;
       }
-      
-      // Text styling
-      .inquiry-text {
-        font-weight: 500;
-        color: #e9ecef;
+
+      &:focus {
+        background: rgba(15, 23, 42, 0.85) !important;
+        border-color: rgba(99, 102, 241, 0.6) !important;
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.35) !important;
+        outline: none;
       }
-    }
-    
-    // Hover state
-    &:hover .form-check-label {
-      border-color: #adb5bd;
-      background-color: #e9ecef;
-      
-      .inquiry-icon, .inquiry-text {
-        color: #495057;
+
+      option {
+        background: #0f172a;
+        color: #ffffff;
       }
     }
-    
-    // Checked state
-    .form-check-input:checked + .form-check-label {
-      border-color: #0d6efd;
-      background-color: #e7f1ff;
-      
-      .inquiry-icon {
-        color: #0d6efd;
+
+    label {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+  }
+
+  /* Custom Radio Selector Pills */
+  .inquiry-type-selector {
+    .form-check {
+      padding-left: 0;
+      margin-bottom: 0.75rem;
+
+      .form-check-input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
       }
-      
-      .inquiry-text {
-        color: #0a58ca;
+
+      .form-check-label {
+        display: flex;
+        align-items: center;
+        padding: 0.85rem 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(8px);
+
+        .inquiry-icon {
+          font-size: 1.3rem;
+          margin-right: 0.85rem;
+          color: #818cf8;
+          transition: all 0.3s ease;
+        }
+
+        .inquiry-text {
+          font-weight: 500;
+          color: #cbd5e1;
+          font-size: 0.95rem;
+          transition: all 0.3s ease;
+        }
+      }
+
+      &:hover .form-check-label {
+        border-color: rgba(99, 102, 241, 0.4);
+        background: rgba(99, 102, 241, 0.1);
+
+        .inquiry-icon {
+          color: #38bdf8;
+          transform: scale(1.1);
+        }
+
+        .inquiry-text {
+          color: #ffffff;
+        }
+      }
+
+      .form-check-input:checked + .form-check-label {
+        border-color: rgba(99, 102, 241, 0.7);
+        background: rgba(99, 102, 241, 0.2);
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+
+        .inquiry-icon {
+          color: #38bdf8;
+        }
+
+        .inquiry-text {
+          color: #ffffff;
+          font-weight: 600;
+        }
       }
     }
-    
-    // Focus state
-    .form-check-input:focus + .form-check-label {
-      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+
+  /* Submit Button */
+  button[type="submit"] {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    border-radius: 30px !important;
+    padding: 0.85rem 2.5rem !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    &:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.6) !important;
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
     }
   }
 }
-}
 
 #consent-checkbox:checked {
-    border-color: #0d6efd;
-    background-color: #0d6efd;
+  border-color: #6366f1;
+  background-color: #6366f1;
 }

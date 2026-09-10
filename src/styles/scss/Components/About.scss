@@ -2,55 +2,100 @@
 @use '../variables/var' as *;
 
 .about_section {
-    background: linear-gradient(90deg,rgba(29, 44, 80, 1) 0%, rgba(217, 195, 30, 1) 0%, rgba(92, 10, 29, 1) 0%, rgba(90, 56, 155, 1) 56%, rgba(16, 40, 89, 1) 100%, rgba(0, 89, 255, 1) 100%, rgba(231, 0, 247, 1) 100%, rgba(48, 22, 69, 1) 100%, rgba(18, 26, 40, 1) 100%, rgba(18, 26, 40, 1) 100%, rgba(18, 26, 40, 1) 100%, rgba(18, 4, 4, 1) 100%);
-    color: $gray-shade-10;
-    padding: 40px 0;
-    .education {
-        .card {
-            background: $light-blue;
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: $white;
-            margin-bottom: 20px;
-            .card-header {
-            background: $light-blue;
-                color: $white;
-                font-weight: bold;
-                display: flex;
-                align-items: center;
-                i {
-                    margin-right: 10px;
-                }
-            }
-            &:hover {
-                background: #243763;
-                .card-header {
-                    background: #243763;
-                }
-            }
+  background: transparent;
+  color: #e2e8f0;
+  padding: 5rem 0;
+
+  h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  h5 {
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #94a3b8;
+    line-height: 1.7;
+    font-size: 1.02rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .education .card,
+  .career_highlight {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+    .card-header {
+      background: rgba(30, 41, 59, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 12px;
+        color: #818cf8;
+        font-size: 1.3rem;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .card-body {
+      padding: 1.5rem;
+
+      p {
+        color: #cbd5e1;
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+          color: #94a3b8;
+          font-size: 0.9rem;
+          margin-bottom: 0;
         }
+      }
+
+      img {
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+      }
     }
-    .career_highlight {
-         background: #243763;
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: $white;
-            margin-bottom: 20px;
-            .card-header {
-            background: #243763;
-                color: $white;
-                font-weight: bold;
-                display: flex;
-                align-items: center;
-                i {
-                    margin-right: 10px;
-                }
-            }
-            &:hover {
-                background: $light-blue;
-                .card-header {
-                    background: $light-blue;
-                }
-            }
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: rgba(99, 102, 241, 0.45);
+      box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.3);
+
+      .card-header {
+        background: linear-gradient(90deg, rgba(99, 102, 241, 0.3) 0%, rgba(6, 182, 212, 0.2) 100%);
+
+        i {
+          transform: scale(1.15);
+          color: #38bdf8;
+        }
+      }
     }
-} 
+  }
+}
+ 

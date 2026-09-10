@@ -1,19 +1,35 @@
 /* VARIABLES */
 
-// colors
-// My custom color
-$dark-blue: #121A28;
-$light-blue: #1D2C50;
-$blue-01: #1E2836;
-$blue-02: #171F2E;
-$blue-03: #1F2937;
+// Modern Cosmic Glassmorphism Colors & Tokens
+$bg-dark: #0b0f19;
+$dark-blue: #0f172a;
+$light-blue: #1e293b;
+$blue-01: #1e293b;
+$blue-02: #0f172a;
+$blue-03: #111827;
 
+// Glassmorphism tokens
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-bg-hover: rgba(255, 255, 255, 0.09);
+$glass-bg-active: rgba(255, 255, 255, 0.12);
+$glass-card-bg: rgba(15, 23, 42, 0.65);
+$glass-card-border: rgba(255, 255, 255, 0.12);
+$glass-border-hover: rgba(99, 102, 241, 0.4);
+$glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+$glass-shadow-glow: 0 10px 30px -5px rgba(99, 102, 241, 0.3);
+$glass-blur: blur(16px);
+$glass-backdrop: blur(16px) saturate(180%);
+
+// Vibrant Gradient Presets
+$gradient-primary: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+$gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%);
+$gradient-glow: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
 
 $white: #FFFFFF;
 $primary-shade: rgb(255, 78, 46);
 $primary-light: lighten($primary-shade, 37%);
 $primary-dark: darken($primary-shade, 12%);
-$accent-shade: #1462dd;
+$accent-shade: #6366f1;
 $accent-light: lighten($accent-shade, 37%);
 $accent-dark: darken($accent-shade, 12%);
 // Reassign color vars to semantic color scheme

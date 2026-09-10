@@ -4,11 +4,11 @@ import '../../styles/css/Components/Footer.min.css';
 
 function Footer() {
   const socialLinks = [
-    { icon: 'bi-github', url: 'https://github.com/yourusername' },
+    { icon: 'bi-github', url: 'https://github.com/Indranil836' },
     { icon: 'bi-linkedin', url: 'https://www.linkedin.com/in/indranil-roy-83b1291a9/' },
-    { icon: 'bi-twitter-x', url: 'https://twitter.com/yourhandle' },
-    { icon: 'bi-instagram', url: 'https://instagram.com/yourprofile' },
-    { icon: 'bi-envelope-fill', url: 'mailto:your@email.com' }
+    { icon: 'bi-twitter-x', url: 'https://twitter.com/_i.t.z.indra_' },
+    { icon: 'bi-instagram', url: 'https://instagram.com/_i.t.z.indra_' },
+    { icon: 'bi-envelope-fill', url: 'mailto:indranilroy836@gmail.com' }
   ];
 
   return (
@@ -18,7 +18,7 @@ function Footer() {
           <div className='footer_head'>
             <h3 className='text-center'>Let's Connect</h3>
             <p className='text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed'>
-              I'm not currently taking on new client work but feel free to contact me for any other inquiries, collaborations, or just to say hello!
+              I'm always open to discussing new projects, technical consulting, creative collaborations, or exciting opportunities. Feel free to reach out!
             </p>
           </div>
           
@@ -40,7 +40,7 @@ function Footer() {
           </div>
           
           <div className='footer_bottom'>
-            <p className='text-center'>© 2025 Indranil Roy. All rights reserved.</p>
+            <p className='text-center'>© 2026 Indranil Roy. All rights reserved.</p>
             <p className='text-center'>Made with ❤️ using Modern Technology</p>
           </div>
         </Container>

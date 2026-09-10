@@ -47,15 +47,15 @@ export default function FeaturedBlog() {
             <Col lg={7}>
               <Card className="h-100 featured-card">
                 <Card.Body className="d-flex flex-column">
-                  <div className="d-flex align-items-center mb-3 flex-wrap">
+                  <div className="d-flex align-items-center mb-3 flex-wrap article-meta">
                     {featuredArticle.featured && (
-                      <Badge bg="primary" className="me-2 mb-1">Featured</Badge>
+                      <Badge className="featured-badge me-2 mb-1">Featured</Badge>
                     )}
-                    <span className="text-muted me-2 mb-1">{featuredArticle.date}</span>
-                    <span className="text-muted me-2 mb-1">•</span>
-                    <span className="text-muted me-2 mb-1">{featuredArticle.readTime}</span>
-                    <span className="text-muted me-2 mb-1">•</span>
-                    <span className="text-muted mb-1">{featuredArticle.category}</span>
+                    <span className="meta-text me-2 mb-1">{featuredArticle.date}</span>
+                    <span className="meta-dot me-2 mb-1">•</span>
+                    <span className="meta-text me-2 mb-1">{featuredArticle.readTime}</span>
+                    <span className="meta-dot me-2 mb-1">•</span>
+                    <span className="meta-category mb-1">{featuredArticle.category}</span>
                   </div>
                   <img 
                     src={featuredArticle.image} 
@@ -68,7 +68,7 @@ export default function FeaturedBlog() {
                   </Card.Text>
                   <div className="mt-3 mb-4">
                     {featuredArticle.tags.map((tag, index) => (
-                      <Badge key={index} bg="light" text="dark" className="me-2 mb-1">
+                      <Badge key={index} className="article-tag-badge me-2 mb-1">
                         {tag}
                       </Badge>
                     ))}
@@ -92,12 +92,12 @@ export default function FeaturedBlog() {
               {(searchTerm ? filteredArticles : allArticles).map((article) => (
                 <Card key={article.id} className="mb-4 article-card">
                   <Card.Body>
-                    <div className="d-flex text-muted mb-2 flex-wrap">
-                      <span className="me-2">{article.date}</span>
-                      <span className="mx-1">•</span>
-                      <span className="me-2">{article.readTime}</span>
-                      <span className="mx-1">•</span>
-                      <span>{article.category}</span>
+                    <div className="d-flex article-meta mb-2 flex-wrap align-items-center">
+                      <span className="meta-text me-2">{article.date}</span>
+                      <span className="meta-dot mx-1">•</span>
+                      <span className="meta-text me-2">{article.readTime}</span>
+                      <span className="meta-dot mx-1">•</span>
+                      <span className="meta-category">{article.category}</span>
                     </div>
                     <Card.Title as="h4" className="mb-3">{article.title}</Card.Title>
                     <Card.Text className="mb-3">
@@ -105,7 +105,7 @@ export default function FeaturedBlog() {
                     </Card.Text>
                     <div className="mb-3">
                       {article.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} bg="light" text="dark" className="me-2 mb-1">
+                        <Badge key={tagIndex} className="article-tag-badge me-2 mb-1">
                           {tag}
                         </Badge>
                       ))}

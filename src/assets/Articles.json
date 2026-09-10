@@ -1,14 +1,14 @@
 {
   "featuredArticle": {
     "id": 1,
-    "date": "2024-10-4",
+    "date": "2024-10-04",
     "readTime": "8 min read",
     "category": "Backend Architecture",
     "title": "How to apply a Drupal patch: A Step by Step Guide",
     "description": "Applying a patch in Drupal is a common task for fixing bugs, introducing custom modifications, or testing updates before they are officially released. Patches are text files containing code changes, usually created using Git, that developers can apply to their local or remote Drupal environments. In this guide, we'll walk you through the step-by-step process of applying a patch, ensuring that you can confidently integrate changes while maintaining a smooth workflow.",
-    "tags": ["Drupal", "Patch", "Composer"],
+    "tags": ["Drupal", "Patch", "Composer", "Git"],
     "featured": true,
-    "isInernal": false,
+    "isInternal": false,
     "link": "https://www.tutorials24x7.com/drupal/how-to-apply-a-drupal-patch-a-step-by-step-guide",
     "image": "https://www.tutorials24x7.com/sites/default/files/styles/blog_landing_page/public/blog-banner/2024-10/tutorials24x7-banner-drupal_2.jpg?itok=ut3aM-5W"
   },
@@ -17,46 +17,37 @@
       "id": 2,
       "date": "2024-11-28",
       "readTime": "6 min read",
-      "category": "JavaScript",
-      "title": "The Evolution of JavaScript: From ES6 to ES2024",
-      "description": "Exploring the latest JavaScript features and how they're changing the way we write modern web applications.",
-      "tags": ["JavaScript", "ES2024"]
+      "category": "Backend Development",
+      "title": "Building Custom Modules & Services in Drupal 10/11",
+      "description": "A comprehensive guide on creating custom Drupal plugins, event subscribers, and service containers for enterprise web applications.",
+      "tags": ["Drupal", "PHP", "Backend"]
     },
     {
       "id": 3,
       "date": "2024-11-15",
-      "readTime": "10 min read",
-      "category": "Leadership",
-      "title": "Leading Engineering Teams: Scaling High-Performance Development Organizations",
-      "description": "Practical insights from building and scaling engineering organizations, based on my experience at Acquila.",
-      "tags": ["Leadership", "Team Building"]
+      "readTime": "7 min read",
+      "category": "React & Frontend",
+      "title": "Integrating Decoupled Headless Drupal with React",
+      "description": "Exploring RESTful APIs and JSON:API in Drupal to power modern single-page frontend applications with React.",
+      "tags": ["Drupal", "React", "Decoupled"]
     },
     {
       "id": 4,
       "date": "2024-10-22",
-      "readTime": "7 min read",
-      "category": "React",
-      "title": "Advanced React Patterns for Modern Applications",
-      "description": "Exploring cutting-edge React patterns that can elevate your application architecture.",
-      "tags": ["React", "Frontend"]
+      "readTime": "5 min read",
+      "category": "DevOps & Containers",
+      "title": "Local Drupal Development with DDEV & Docker Containerization",
+      "description": "How setting up standardized Docker environments accelerates local module development and deployment pipelines.",
+      "tags": ["Docker", "DDEV", "DevOps"]
     },
     {
       "id": 5,
       "date": "2024-09-30",
-      "readTime": "5 min read",
-      "category": "TypeScript",
-      "title": "TypeScript Best Practices for Large Codebases",
-      "description": "How we leverage TypeScript to maintain type safety across massive codebases.",
-      "tags": ["TypeScript", "JavaScript"]
-    },
-    {
-      "id": 6,
-      "date": "2024-08-15",
-      "readTime": "9 min read",
+      "readTime": "6 min read",
       "category": "Performance",
-      "title": "Optimizing Web Performance in 2024",
-      "description": "New techniques and tools for achieving blazing fast web applications.",
-      "tags": ["Performance", "Web"]
+      "title": "Drupal Database Query Optimization & Caching Strategies",
+      "description": "Techniques for optimizing database queries, cache tags, and BigPipe rendering to build lightning-fast web applications.",
+      "tags": ["Drupal", "MySQL", "Performance"]
     }
   ]
 }
