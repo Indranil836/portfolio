@@ -9,9 +9,12 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 function App() {
+  const publicUrl = process.env.PUBLIC_URL || '';
+  const basename = (publicUrl && window.location.pathname.startsWith(publicUrl)) ? publicUrl : '';
+
   return (
     <>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={basename}>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<NoPage />} />

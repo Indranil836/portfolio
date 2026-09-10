@@ -1,0 +1,19 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-react-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - BROWSER=none
+      - CHOKIDAR_USEPOLLING=true
+      - FAST_REFRESH=true
+      - PUBLIC_URL=
+    restart: unless-stopped
