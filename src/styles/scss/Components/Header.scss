@@ -4,12 +4,12 @@
 /* Header Styles - Modern Glassmorphism */
 
 .header_branding { 
-  background: rgba(11, 15, 25, 0.75) !important;
+  background: var(--glass-header-bg) !important;
   backdrop-filter: blur(20px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--glass-card-border);
   padding: 0.85rem 0;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .header_links .nav-link {
-  color: rgba(243, 244, 246, 0.9) !important;
+  color: var(--text-primary) !important;
   font-weight: 500;
   font-size: 0.95rem;
   margin: 0 6px;
@@ -41,19 +41,48 @@
 
 .header_links .nav-link:hover,
 .header_links .nav-link.active {
-  color: #ffffff !important;
-  background: rgba(99, 102, 241, 0.2) !important;
-  border-color: rgba(165, 180, 252, 0.4);
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+  color: var(--text-heading) !important;
+  background: rgba(99, 102, 241, 0.18) !important;
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
   transform: translateY(-1px);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50% !important;
+  background: var(--toggle-btn-bg) !important;
+  border: 1px solid var(--toggle-btn-border) !important;
+  color: var(--toggle-btn-color) !important;
+  padding: 0 !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: rotate(20deg) scale(1.1);
+    border-color: rgba(99, 102, 241, 0.5) !important;
+    box-shadow: 0 0 18px rgba(99, 102, 241, 0.4);
+  }
+
+  .theme-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+  }
 }
 
 /* Custom Hamburger Styles */
 .navbar-toggler.hamburger {
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--glass-card-border);
   border-radius: 10px;
   padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: var(--pill-bg) !important;
   backdrop-filter: blur(10px);
 }
 
@@ -66,7 +95,7 @@
   width: 24px;
   height: 2px;
   margin: 5px 0;
-  background-color: #f3f4f6;
+  background-color: var(--text-primary);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -87,14 +116,14 @@
 /* Mobile menu styles */
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    background: rgba(15, 23, 42, 0.95);
+    background: var(--glass-card-bg);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-card-border);
     border-radius: 16px;
     padding: 1.5rem;
     margin-top: 1rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--card-shadow);
   }
 
   .header_links {
@@ -106,5 +135,9 @@
     margin: 8px 0 !important;
     padding: 12px 20px !important;
     width: 100%;
+  }
+
+  .theme-toggle-btn {
+    margin: 12px auto 0 auto !important;
   }
 }

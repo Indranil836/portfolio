@@ -2,30 +2,30 @@
 @use '../variables/var' as *;
 
 .footer {
-  background: rgba(11, 15, 25, 0.85);
+  background: var(--glass-footer-bg);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #f3f4f6;
+  border-top: 1px solid var(--glass-card-border);
+  color: var(--text-primary);
   padding: 4rem 0 2.5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 
   .footer_head {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--glass-card-border);
     padding-bottom: 2rem;
     margin-bottom: 2.5rem;
 
     h3 {
       font-size: 2rem;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text-heading);
       margin-bottom: 0.75rem;
     }
 
     p {
-      color: #94a3b8;
+      color: var(--text-muted);
       font-size: 1.05rem;
     }
   }
@@ -37,25 +37,25 @@
   }
 
   .social-media-glass {
-    background: rgba(15, 23, 42, 0.65);
+    background: var(--glass-card-bg);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border-radius: 50px;
     padding: 14px 28px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--glass-card-border);
     display: flex;
     gap: 22px;
     animation: float 6s ease-in-out infinite;
 
     &:hover {
-      border-color: rgba(99, 102, 241, 0.4);
+      border-color: var(--glass-card-hover-border);
       box-shadow: 0 15px 40px rgba(99, 102, 241, 0.25);
     }
   }
 
   .social-icon {
-    color: #cbd5e1;
+    color: var(--text-primary);
     font-size: 1.4rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
@@ -64,8 +64,8 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--pill-bg);
+    border: 1px solid var(--pill-border);
 
     &:hover {
       color: #ffffff;
@@ -80,7 +80,7 @@
     margin-top: 2rem;
 
     p {
-      color: #64748b;
+      color: var(--text-muted);
       font-size: 0.9rem;
       margin-bottom: 0.3rem;
     }

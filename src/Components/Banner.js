@@ -1,11 +1,14 @@
 import React, { useCallback } from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
+import { useTheme } from '../context/ThemeContext';
 import Profile from '../assets/profile.jpeg';
 import '../styles/css/Components/Banner.min.css';
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // Import the slim package
 
 export default function Banner() {
+  const { theme } = useTheme();
+
   const particlesInit = useCallback(async engine => {
     console.log(engine);
     await loadSlim(engine);
@@ -14,6 +17,12 @@ export default function Banner() {
   const particlesLoaded = useCallback(async container => {
     await console.log(container);
   }, []);
+
+  const isDark = theme === 'dark';
+  const particleColors = isDark 
+    ? ["#38bdf8", "#818cf8", "#c084fc"] 
+    : ["#4f46e5", "#0284c7", "#9333ea"];
+  const linkColor = isDark ? "#818cf8" : "#4f46e5";
 
   return (
     <>
@@ -56,13 +65,13 @@ export default function Banner() {
             },
             particles: {
               color: {
-                value: ["#38bdf8", "#818cf8", "#c084fc"],
+                value: particleColors,
               },
               links: {
-                color: "#818cf8",
+                color: linkColor,
                 distance: 140,
                 enable: true,
-                opacity: 0.25,
+                opacity: isDark ? 0.25 : 0.35,
                 width: 1,
               },
               move: {
